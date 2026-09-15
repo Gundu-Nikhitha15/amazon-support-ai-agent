@@ -1,0 +1,6 @@
+﻿rank,failure_mode,evidence,hypothesis
+1,Intent classification confusion,Delivery Delay was predicted as Delivered but Not Received 11 times.,The semantic classifier struggles with overlapping support topics and ambiguous customer wording.
+2,Retrieval returns a semantically similar but wrong-intent case,107 of 240 Golden queries had a top-1 retrieval whose predicted intent did not match the expected intent.,"Semantic similarity alone can rank related delivery, tracking, refund and support cases above the correct issue."
+3,Low-confidence predictions cause over-escalation,112 routine cases were escalated although the expected decision was AUTO_HANDLE.,Using low classifier confidence as a strong escalation trigger makes the system overly conservative.
+4,Some complex cases are incorrectly auto-handled,8 cases required human handling but the system selected AUTO_HANDLE.,"A classifier confidence score does not fully capture fraud, delivery investigations, account issues or complex support failures."
+5,Generated responses are not always tightly aligned with the customer intent,95 of 240 responses were rated PARTIAL; intent relevance was only 62.50% in the automated response evaluation.,The current response generator uses deterministic intent templates rather than directly grounding every sentence in the retrieved historical response.

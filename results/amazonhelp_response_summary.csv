@@ -1,0 +1,9 @@
+﻿metric,value
+Total Responses,240.0
+Response Present %,100.0
+Actionable %,100.0
+Safe %,97.92
+Intent Relevant %,62.5
+GOOD %,60.42
+PARTIAL %,39.58
+POOR %,0.0
